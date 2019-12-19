@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="TestGroup">
+    <test name="AllTest">
+        <classes>
+            <class name="com.course.Groups.GroupsOnClass1" />
+            <class name="com.course.Groups.GroupsOnClass2" />
+            <class name="com.course.Groups.GroupsOnClass3" />
+        </classes>
+    </test>
+    <test name="StudentTest">
+        <groups>
+            <run>
+                <include name="Student" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.Groups.GroupsOnClass1" />
+            <class name="com.course.Groups.GroupsOnClass2" />
+            <class name="com.course.Groups.GroupsOnClass3" />
+        </classes>
+    </test>
+</suite>
