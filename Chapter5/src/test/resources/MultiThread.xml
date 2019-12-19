@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="MultiThread" parallel="classes" thread-count="3">
+<!--    parallel 的值 可以为 methods、 tests、classes-->
+<!--    methods方法级别的 所有的用例都可以在不同的线程进行运行
+        tests 不同的tests标签下的用例可以在不同的线程进行运行
+              相同的tests标签下的用例只能在同一线程下进行运行
+        classes 不同的classes标签下的用例可以在不同的线程进行运行
+                相同的classes标签下的用例只能在同一线程下进行运行
+-->
+    <test name="MultiThreadTest">
+        <classes name="classes1">
+            <class name="com.course.MultiThread.MultiThreadOnXML"/>
+        </classes>
+    </test>
+    <test name="MultiThreadTest1">
+        <classes name="classes2">
+            <class name="com.course.MultiThread.MultiThreadOnXML"/>
+        </classes>
+    </test>
+</suite>
