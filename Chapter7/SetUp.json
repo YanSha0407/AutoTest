@@ -1,0 +1,139 @@
+[
+  {
+    "description":"这是我的第一个mocoDemo",
+    "request": {
+      "uri" : "/demo"
+    },
+    "response": {
+      "text": "第一个moco返回的数据"
+    }
+  },
+  {
+    "description":"模拟一个不带参数的get请求",
+    "request": {
+      "uri": "/getUser",
+      "method": "get"
+    },
+    "response": {
+      "text": "这是一个不带参数的get响应"
+    }
+  },
+  {
+    "description" : "模拟一个带参数的get请求",
+    "request": {
+      "uri": "/getUserParam",
+      "method": "get",
+      "queries": {
+        "name": "张三",
+        "age": "28"
+      }
+    },
+    "response": {
+      "text": "张三今年28啦"
+    }
+  },
+  {
+    "description": "这是一个不带参数的post请求",
+    "request": {
+      "uri": "/postDemo",
+      "method": "post"
+    },
+    "response":{
+      "text": "这是我的一次个post请求"
+    }
+  },
+  {
+    "description": "这是我的第一个带参数的post请求",
+    "request": {
+      "uri":"/postParamDemo",
+      "method": "post",
+      "forms": {
+        "name": "胡汉三",
+        "age": "28"
+      }
+    },
+    "response": {
+      "text": "我胡汉三带着参数回来了!"
+    }
+  },
+  {
+    "description": "get请求添加cookies信息",
+    "request": {
+      "uri": "/get/Demo/Cookies",
+      "method": "get",
+      "cookies": {
+        "login": "true"
+      }
+    },
+    "response": {
+      "text": "这是一个带cookies的get的请求"
+    }
+
+  },
+  {
+    "description": "这是一个带cookies的post请求",
+    "request": {
+      "uri": "/post/Demo/Cookies",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "name": "胡汉三",
+        "age": 28
+      }
+    },
+    "response": {
+      "status": "200",
+      "json": {
+        "name": "胡汉三",
+        "age": "28",
+        "status": 1
+      }
+    }
+  },
+  {
+     "description":"带header头的post请求",
+      "request": {
+         "uri": "/post/Demo/Headers",
+         "method": "post",
+         "headers": {
+           "content-type": "application/json"
+         },
+        "json": {
+          "name": "zhangsan",
+          "age": 18
+        }
+      },
+    "response": {
+      "status": 200,
+      "json": {
+        "name": "张三",
+        "age": 18
+      }
+    }
+  },
+  {
+    "description": "重定向",
+    "request": {
+      "uri": "/redirect"
+    },
+    "redirectTo": "http://www.baidu.com"
+  },
+  {
+    "description": "重定向到本地接口",
+    "request": {
+      "uri": "/redirect/Other"
+    },
+    "redirectTo": "/redirect/toUs"
+  },
+  {
+    "description": "被重定向",
+    "request": {
+      "uri": "/redirect/toUs"
+    },
+    "response": {
+      "text": "我被重定向了"
+    }
+  }
+]

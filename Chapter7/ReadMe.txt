@@ -1,0 +1,1 @@
+java -jar moco-runner-1.0.0-standalone.jar http -p 8888 -c SetUp.json   // 开启端口 并注册接口json文件
