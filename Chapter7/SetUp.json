@@ -100,6 +100,9 @@
          "headers": {
            "content-type": "application/json"
          },
+        "cookies": {
+          "login": "true"
+        },
         "json": {
           "name": "zhangsan",
           "age": 18
@@ -134,6 +137,19 @@
     },
     "response": {
       "text": "我被重定向了"
+    }
+  },
+  {
+    "description": "这是一个会返回cookies信息的get请求",
+    "request": {
+      "uri": "/getCookies",
+      "method": "get"
+    },
+    "response": {
+      "text": "返回cookies信息成功",
+      "cookies": {
+         "login": "true"
+      }
     }
   }
 ]
